@@ -1,13 +1,16 @@
-// import logo from './logo.svg';
 import React from 'react';
 import styles from './ShoppingCart.module.scss';
+
+import ProductsWrapper from './ProductsWrapper/ProductsWrapper.jsx';
+import Summary from './Summary/Summary.jsx';
 
 const ShoppingCart = () => {
 
   return (
     <div className={styles.wrapper}>
-      Test
-      {/* <img src={logo} className="App-logo" alt="logo" /> */}
+      <h1 className={styles.header}>Shopping Cart</h1>
+      <ProductsWrapper />
+      <Summary />
     </div>
   );
 }
