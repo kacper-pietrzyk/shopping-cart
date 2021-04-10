@@ -11,9 +11,14 @@
 }
 
 html {
+  min-height: 100vh;
   font-size: 62.5%;
 }
 
 body {
   font-size: 1.6rem;
+}
+
+.wrapper {
+  background-color: pink;
 }

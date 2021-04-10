@@ -1,8 +1,8 @@
 // import logo from './logo.svg';
 import React from 'react';
-import styles from './App.module.scss';
+import styles from './ShoppingCart.module.scss';
 
-const App = () => {
+const ShoppingCart = () => {
 
   return (
     <div className={styles.wrapper}>
@@ -12,4 +12,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default ShoppingCart;

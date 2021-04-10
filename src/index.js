@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App/App.jsx';
+import ShoppingCart from './components/ShoppingCart/ShoppingCart.jsx';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ShoppingCart />
   </React.StrictMode>,
   document.getElementById('root')
 );
