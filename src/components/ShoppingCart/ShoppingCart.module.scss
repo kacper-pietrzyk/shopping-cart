@@ -16,9 +16,23 @@ html {
 }
 
 body {
+  font-family: $font-family-default;
   font-size: 1.6rem;
 }
 
 .wrapper {
-  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 10px;
+}
+
+.header {
+  color: $color-text-primary;
+  font-size: $font-size-l;
+  font-weight: 400;
+}
+
+.main {
+  background-color: red;
+  height: 500px;
 }
