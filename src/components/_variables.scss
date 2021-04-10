@@ -3,18 +3,22 @@
 $font-family-default: 'Roboto',
 sans-serif;
 
-$font-size-s: 1.6rem;
-$font-size-m: 2.0rem;
-$font-size-l: 2.8rem;
-$font-size-xl: 3.6rem;
+$font-size-s: 1.2rem;
+// $font-size-m: 1.6rem;
+$font-size-l: 2.0rem;
 
 $color-text-primary: rgb(119, 119, 119);
 $color-text-secondary: rgb(0, 0, 0);
-$color-button-text: rgb(255, 255, 255);
-$color-button-background: rgb(5, 2, 3);
-$color-button-border: rgb(204, 204, 204);
-$color-border: rgb(220, 220, 220);
+$color-buttonDark-text: rgb(255, 255, 255);
+$color-buttonDark-background: rgb(5, 2, 3);
+$color-buttonDark-border: rgb(204, 204, 204);
+$color-outer-border: rgb(236, 236, 236);
+$color-separationHeader-line: rgb(220, 220, 220);
+$color-separation-line: rgb(242, 242, 242);
 $color-border-active: rgb(33, 30, 33);
 $color-background-primary: rgb(255, 255, 255);
 $color-background-secondary: rgb(251, 251, 251);
 $color-background-tertiary: rgb(245, 245, 245);
+
+$product-width: 35px;
+$delete-width: 15px;
