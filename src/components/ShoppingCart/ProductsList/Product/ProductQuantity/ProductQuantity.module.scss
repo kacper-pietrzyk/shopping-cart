@@ -1,0 +1,43 @@
+@import '../../../../variables';
+
+.quantity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1 1 0;
+
+  &__button {
+    width: 20px;
+    height: 20px;
+    color: $color-text-primary;
+    background-color: $color-background-tertiary;
+    border: 1px solid $color-buttonDark-border;
+    font-family: $font-family-default;
+    font-size: $font-size-s;
+    font-weight: 700;
+    outline: none;
+  }
+
+  &__input {
+    width: 20px;
+    color: $color-text-primary;
+    text-align: center;
+
+    &:focus {
+      border: 1px solid $color-inputBorder-active;
+      outline: none;
+    }
+  }
+
+  &__edit {
+    display: flex;
+    width: 18px;
+    background-color: $color-background-primary;
+    border: none;
+    outline: none;
+  }
+
+  &__editImg {
+    width: 100%;
+  }
+}
