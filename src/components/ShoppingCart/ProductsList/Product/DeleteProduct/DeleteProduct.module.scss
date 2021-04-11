@@ -1,0 +1,11 @@
+@import '../../../../variables';
+
+.delete {
+  background-color: $color-background-primary;
+  border: none;
+  outline: none;
+
+  &__image {
+    width: $delete-width;
+  }
+}
