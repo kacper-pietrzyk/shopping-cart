@@ -15,6 +15,14 @@ const ShoppingCart = () => {
   const [productsQty, setProductsQty] = useState(initialQuantity);
   const [subtotal, setSubtotal] = useState(0);
 
+  const calculateSubtotal = () => {
+    let sum = 0;
+    for (let i = 0; i < productsList.length; i++) {
+      sum += productsList[i].price * productsQty[i].quantity;
+    }
+    setSubtotal(sum);
+  }
+
   useEffect(() => {
     let sum = 0;
     for (let i = 0; i < productsList.length; i++) {
@@ -52,8 +60,14 @@ const ShoppingCart = () => {
           productsList={productsList}
           productsQty={productsQty}
           handleQuantityChange={handleQuantityChange}
+          calculateSubtotal={calculateSubtotal}
         />
-        <button className={styles.updateCart}>Update Shopping Cart</button>
+        <button
+          className={styles.updateCart}
+          onClick={calculateSubtotal}
+        >
+          Update Shopping Cart
+          </button>
       </main>
       <Summary
         subtotal={subtotal}
