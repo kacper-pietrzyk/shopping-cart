@@ -4,7 +4,7 @@ import styles from './Product.module.scss';
 import DeleteProduct from './DeleteProduct/DeleteProduct';
 import ProductQuantity from './ProductQuantity/ProductQuantity';
 
-const Product = ({ id, name, image, price, quantity, handleQuantityChange }) => {
+const Product = ({ id, name, image, price, quantity, handleQuantityChange, calculateSubtotal }) => {
 
   const imageSrc = require(`../../../../assets/images/${image}`).default;
 
@@ -23,6 +23,7 @@ const Product = ({ id, name, image, price, quantity, handleQuantityChange }) => 
         id={id}
         quantity={quantity}
         handleQuantityChange={handleQuantityChange}
+        calculateSubtotal={calculateSubtotal}
       />
     </li>
   );

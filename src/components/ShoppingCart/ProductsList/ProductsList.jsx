@@ -3,7 +3,7 @@ import styles from './ProductsList.module.scss';
 
 import Product from './Product/Product';
 
-const ProductsList = ({ productsList, productsQty, handleQuantityChange }) => {
+const ProductsList = ({ productsList, productsQty, handleQuantityChange, calculateSubtotal }) => {
 
   const products = productsList.map((product, index) => (
     <Product
@@ -14,6 +14,7 @@ const ProductsList = ({ productsList, productsQty, handleQuantityChange }) => {
       price={product.price}
       quantity={productsQty[index].quantity}
       handleQuantityChange={handleQuantityChange}
+      calculateSubtotal={calculateSubtotal}
     />
   ))
 

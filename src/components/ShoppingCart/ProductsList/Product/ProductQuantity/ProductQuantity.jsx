@@ -3,7 +3,7 @@ import styles from './ProductQuantity.module.scss';
 
 import editImage from '../../../../../assets/images/edit-img.png';
 
-const ProductQuantity = ({ id, quantity, handleQuantityChange }) => {
+const ProductQuantity = ({ id, quantity, handleQuantityChange, calculateSubtotal }) => {
 
   const handleQuantity = e => {
     handleQuantityChange(e);
@@ -34,7 +34,10 @@ const ProductQuantity = ({ id, quantity, handleQuantityChange }) => {
       >
         +
         </button>
-      <button className={styles.quantity__edit}>
+      <button
+        className={styles.quantity__edit}
+        onClick={calculateSubtotal}
+      >
         <img
           className={styles.quantity__editImg}
           src={editImage}
