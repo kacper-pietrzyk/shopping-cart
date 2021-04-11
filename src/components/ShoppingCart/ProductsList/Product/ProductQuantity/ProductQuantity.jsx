@@ -3,18 +3,10 @@ import styles from './ProductQuantity.module.scss';
 
 import editImage from '../../../../../assets/images/edit-img.png';
 
-const ProductQuantity = ({ id, quantity, handleButtonQuantity }) => {
+const ProductQuantity = ({ id, quantity, handleQuantityChange }) => {
 
-  // const handleInputChange = e => {
-  //   if (e.target.value >= 0) {
-  //     setQty(e.target);
-  //   } else {
-  //     setQty(0)
-  //   }
-  // }
-
-  const handleButtonClick = e => {
-    handleButtonQuantity(e);
+  const handleQuantity = e => {
+    handleQuantityChange(e);
   }
 
   return (
@@ -23,21 +15,22 @@ const ProductQuantity = ({ id, quantity, handleButtonQuantity }) => {
         className={styles.quantity__button}
         id={id}
         name="remove"
-        onClick={handleButtonClick}
+        onClick={handleQuantity}
       >
         -
         </button>
       <input
         className={styles.quantity__input}
+        id={id}
         type="number"
         value={quantity}
-      // onChange={handleInputChange}
+        onChange={handleQuantity}
       />
       <button
         className={styles.quantity__button}
         id={id}
         name="add"
-        onClick={handleButtonClick}
+        onClick={handleQuantity}
       >
         +
         </button>
