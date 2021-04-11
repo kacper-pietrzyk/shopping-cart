@@ -1,0 +1,54 @@
+@import '../../../variables';
+
+@mixin totalValues() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 12px;
+  font-size: $font-size-s;
+}
+
+.cartTotals {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  border: 1px solid $color-summaryBorder;
+  font-weight: 700;
+
+  &__header {
+    padding: 10px 12px;
+    background-color: $color-background-tertiary;
+    border-bottom: 1px solid $color-summaryBorder;
+    font-size: $font-size-s;
+    text-transform: uppercase;
+  }
+
+  &__subtotal {
+    @include totalValues();
+    padding: 15px 10px 10px;
+    border-bottom: 1px solid $color-summaryBorder;
+  }
+
+  &__grandTotal {
+    @include totalValues();
+    padding: 15px 10px 20px;
+  }
+
+  &__subtotalText,
+  &__grandTotalText {
+    color: $color-text-primary;
+    font-size: $font-size-s;
+  }
+
+  &__button {
+    align-self: stretch;
+    margin: 0 12px 20px;
+    padding: 10px;
+    color: $color-buttonDark-text;
+    background-color: $color-buttonDark-background;
+    border: none;
+    font-family: $font-family-default;
+    font-size: $font-size-s;
+    font-weight: 700;
+  }
+}
