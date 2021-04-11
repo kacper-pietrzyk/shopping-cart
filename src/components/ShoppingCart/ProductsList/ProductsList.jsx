@@ -3,7 +3,19 @@ import styles from './ProductsList.module.scss';
 
 import Product from './Product/Product';
 
-const ProductsList = () => {
+const ProductsList = ({ productsList, productsQty, handleButtonQuantity }) => {
+
+  const products = productsList.map((product, index) => (
+    <Product
+      key={product.id}
+      id={product.id}
+      name={product.name}
+      image={product.image}
+      price={product.price}
+      quantity={productsQty[index].quantity}
+      handleButtonQuantity={handleButtonQuantity}
+    />
+  ))
 
   return (
 
@@ -13,7 +25,7 @@ const ProductsList = () => {
         <p className={styles.productsList__price}>Unit Price</p>
         <p className={styles.productsList__qty}>Qty</p>
       </li>
-      <Product />
+      {products}
     </ul>
   );
 }
