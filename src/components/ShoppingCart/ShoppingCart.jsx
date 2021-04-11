@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './ShoppingCart.module.scss';
 
 import ProductsList from './ProductsList/ProductsList';
@@ -11,7 +11,17 @@ const ShoppingCart = () => {
 
   const productsList = productsData;
   const initialQuantity = productsQuantity;
+
   const [productsQty, setProductsQty] = useState(initialQuantity);
+  const [subtotal, setSubtotal] = useState(0);
+
+  useEffect(() => {
+    let sum = 0;
+    for (let i = 0; i < productsList.length; i++) {
+      sum += productsList[i].price * initialQuantity[i].quantity;
+    }
+    setSubtotal(sum);
+  }, [productsList, initialQuantity]);
 
   const handleQuantityChange = e => {
     const index = e.target.id - 1;
@@ -45,7 +55,9 @@ const ShoppingCart = () => {
         />
         <button className={styles.updateCart}>Update Shopping Cart</button>
       </main>
-      <Summary />
+      <Summary
+        subtotal={subtotal}
+      />
     </div>
   );
 }
