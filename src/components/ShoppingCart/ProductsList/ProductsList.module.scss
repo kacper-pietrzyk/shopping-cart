@@ -1,0 +1,40 @@
+@import '../../variables';
+
+.productsList {
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size-s;
+
+  &__product {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 2px solid $color-separation-line;
+  }
+
+  &__header {
+    padding-top: 25px;
+    border-bottom: 1px solid $color-separationHeader-line;
+  }
+}
+
+.product {
+
+  &__name {
+    margin-left: calc(#{$product-width} + #{$delete-width});
+  }
+
+  &__name,
+  &__price,
+  &__qty {
+    flex: 1 1 0;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__qty {
+    text-align: left;
+  }
+}

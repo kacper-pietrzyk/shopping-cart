@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ShoppingCart.module.scss';
 
-import ProductsWrapper from './ProductsWrapper/ProductsWrapper.jsx';
+import ProductsList from './ProductsList/ProductsList.jsx';
 import Summary from './Summary/Summary.jsx';
 
 const ShoppingCart = () => {
@@ -9,7 +9,10 @@ const ShoppingCart = () => {
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.header}>Shopping Cart</h1>
-      <ProductsWrapper />
+      <main className={styles.productsWrapper}>
+        <ProductsList />
+        <button className={styles.updateCart}>Update Shopping Cart</button>
+      </main>
       <Summary />
     </div>
   );
