@@ -1,0 +1,17 @@
+@import '../../../variables';
+
+.shipping {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background-color: $color-background-tertiary;
+  border: 1px solid $color-summaryBorder;
+  font-size: $font-size-s;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &__text {
+    font-size: $font-size-s;
+  }
+}
