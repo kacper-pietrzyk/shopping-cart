@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './Shipping.module.scss';
 
-const Shipping = () => {
+const Shipping = ({ shippingValue }) => {
 
   return (
     <div className={styles.shipping}>
       <h2 className={styles.shipping__text}>Shipping</h2>
-      <p>$23.80</p>
+      <p>${shippingValue}</p>
     </div>
   );
 }
