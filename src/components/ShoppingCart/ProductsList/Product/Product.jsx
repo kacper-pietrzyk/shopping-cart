@@ -4,9 +4,9 @@ import styles from './Product.module.scss';
 import DeleteProduct from './DeleteProduct/DeleteProduct';
 import ProductQuantity from './ProductQuantity/ProductQuantity';
 
-import headphones from '../../../../assets/images/headphones.png';
+const Product = ({ id, name, image, price, quantity, handleButtonQuantity }) => {
 
-const Product = () => {
+  const imageSrc = require(`../../../../assets/images/${image}`).default;
 
   return (
     <li className={styles.product}>
@@ -14,12 +14,16 @@ const Product = () => {
       <div className={styles.product__imgWrapper}>
         <img
           className={styles.product__img}
-          src={headphones}
+          src={imageSrc}
           alt="product" />
       </div>
-      <p className={styles.product__info}>Headphones</p>
-      <p className={styles.product__info}>$11.90</p>
-      <ProductQuantity />
+      <p className={styles.product__info}>{name}</p>
+      <p className={styles.product__info}>${price.toFixed(2)}</p>
+      <ProductQuantity
+        id={id}
+        quantity={quantity}
+        handleButtonQuantity={handleButtonQuantity}
+      />
     </li>
   );
 }
