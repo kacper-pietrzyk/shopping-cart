@@ -1,1 +1,19 @@
 @import '../../variables';
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  color: $color-text-secondary;
+
+  &__button {
+    align-self: center;
+    margin-bottom: 25px;
+    padding: 10px;
+    color: $color-buttonDark-text;
+    background-color: $color-buttonDark-background;
+    border: none;
+    font-family: $font-family-default;
+    font-size: $font-size-s;
+  }
+}
