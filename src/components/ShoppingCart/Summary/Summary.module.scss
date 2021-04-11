@@ -16,4 +16,45 @@
     font-family: $font-family-default;
     font-size: $font-size-s;
   }
+
+  &__darkBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .9);
+  }
+
+  &__approval {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-approval-background;
+    box-shadow: 0 0 30px 0 $color-approval-shadow;
+    border-radius: 15px;
+  }
+
+  &__info {
+    padding: 20px;
+    color: $color-text-secondary;
+    font-size: $font-size-l;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__buttonBack {
+    align-self: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: $color-buttonDark-text;
+    background-color: $color-buttonDark-background;
+    border: none;
+    font-family: $font-family-default;
+    font-size: $font-size-s;
+    outline: none;
+  }
 }
