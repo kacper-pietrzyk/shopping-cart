@@ -5,22 +5,14 @@
   flex-direction: column;
   font-size: $font-size-s;
 
-  &__product {
+  &__header {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 12px 0;
-    border-bottom: 2px solid $color-separation-line;
-  }
-
-  &__header {
-    padding-top: 25px;
+    padding: 25px 0 12px;
     border-bottom: 1px solid $color-separationHeader-line;
   }
-}
-
-.product {
 
   &__name {
     margin-left: calc(#{$product-width} + #{$delete-width});
