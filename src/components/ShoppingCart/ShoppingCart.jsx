@@ -13,18 +13,25 @@ const ShoppingCart = () => {
   const initialQuantity = productsQuantity;
   const [productsQty, setProductsQty] = useState(initialQuantity);
 
-  const handleButtonQuantity = e => {
+  const handleQuantityChange = e => {
     const index = e.target.id - 1;
-    const action = e.target.name;
     const newProducstQty = [...productsQty];
 
-    if (action === "remove" && newProducstQty[index].quantity > 0) {
-      newProducstQty[index].quantity--;
-    } else if (action === "add") {
-      newProducstQty[index].quantity++;
+    if (e.target.tagName === "BUTTON") {
+      const action = e.target.name;
+      if (action === "remove" && newProducstQty[index].quantity > 0) {
+        newProducstQty[index].quantity--;
+      } else if (action === "add") {
+        newProducstQty[index].quantity++;
+      }
+    } else {
+      if (e.target.value >= 0) {
+        newProducstQty[index].quantity = e.target.value;
+      } else {
+        newProducstQty[index].quantity = 0;
+      }
     }
-
-    setProductsQty(newProducstQty);
+    setProductsQty(newProducstQty)
   }
 
   return (
@@ -34,7 +41,7 @@ const ShoppingCart = () => {
         <ProductsList
           productsList={productsList}
           productsQty={productsQty}
-          handleButtonQuantity={handleButtonQuantity}
+          handleQuantityChange={handleQuantityChange}
         />
         <button className={styles.updateCart}>Update Shopping Cart</button>
       </main>
