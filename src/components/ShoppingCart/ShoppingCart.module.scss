@@ -32,7 +32,24 @@ body {
   font-weight: 400;
 }
 
-.main {
-  background-color: red;
-  height: 500px;
+.productsWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 25px;
+  padding: 0 10px 30px;
+  color: $color-text-primary;
+  border: 1px solid $color-outer-border;
+  box-shadow: 0 2px 3px 0 $color-outer-border;
+}
+
+.updateCart {
+  align-self: flex-end;
+  margin-top: 20px;
+  padding: 6px 10px;
+  color: $color-buttonDark-text;
+  background-color: $color-buttonDark-background;
+  border: 1px solid $color-buttonDark-border;
+  font-family: $font-family-default;
+  font-size: $font-size-s;
+  font-weight: 700;
 }
