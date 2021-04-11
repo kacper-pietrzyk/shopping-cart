@@ -3,10 +3,17 @@ import styles from './DeleteProduct.module.scss';
 
 import deleteImage from '../../../../../assets/images/x-img.png';
 
-const DeleteProduct = () => {
+const DeleteProduct = ({ id, handleProductDelete }) => {
+
+  const handleDelete = () => {
+    handleProductDelete(id);
+  }
 
   return (
-    <button className={styles.delete}>
+    <button
+      className={styles.delete}
+      onClick={handleDelete}
+    >
       <img
         className={styles.delete__image}
         src={deleteImage}

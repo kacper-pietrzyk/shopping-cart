@@ -9,9 +9,10 @@ import productsQuantity from '../../assets/data/cart_products.json';
 
 const ShoppingCart = () => {
 
-  const productsList = productsData;
+  const initialProductsList = productsData;
   const initialQuantity = productsQuantity;
 
+  const [productsList, setProductsList] = useState(initialProductsList);
   const [productsQty, setProductsQty] = useState(initialQuantity);
   const [subtotal, setSubtotal] = useState(0);
 
@@ -25,15 +26,16 @@ const ShoppingCart = () => {
 
   useEffect(() => {
     let sum = 0;
-    for (let i = 0; i < productsList.length; i++) {
-      sum += productsList[i].price * initialQuantity[i].quantity;
+    for (let i = 0; i < initialProductsList.length; i++) {
+      sum += initialProductsList[i].price * initialQuantity[i].quantity;
     }
     setSubtotal(sum);
-  }, [productsList, initialQuantity]);
+  }, [initialProductsList, initialQuantity]);
 
   const handleQuantityChange = e => {
-    const index = e.target.id - 1;
     const newProducstQty = [...productsQty];
+    const id = Number(e.target.id);
+    const index = newProducstQty.findIndex(product => product.productId === id);
 
     if (e.target.tagName === "BUTTON") {
       const action = e.target.name;
@@ -52,6 +54,19 @@ const ShoppingCart = () => {
     setProductsQty(newProducstQty)
   }
 
+  const handleProductDelete = id => {
+    const newProductsList = productsList.filter(product => product.id !== id);
+    const newProductsQty = productsQty.filter(product => product.productId !== id);
+    setProductsList(newProductsList);
+    setProductsQty(newProductsQty);
+
+    let sum = 0;
+    for (let i = 0; i < newProductsList.length; i++) {
+      sum += newProductsList[i].price * newProductsQty[i].quantity;
+    }
+    setSubtotal(sum);
+  }
+
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.header}>Shopping Cart</h1>
@@ -61,6 +76,7 @@ const ShoppingCart = () => {
           productsQty={productsQty}
           handleQuantityChange={handleQuantityChange}
           calculateSubtotal={calculateSubtotal}
+          handleProductDelete={handleProductDelete}
         />
         <button
           className={styles.updateCart}

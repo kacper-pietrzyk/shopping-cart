@@ -4,13 +4,16 @@ import styles from './Product.module.scss';
 import DeleteProduct from './DeleteProduct/DeleteProduct';
 import ProductQuantity from './ProductQuantity/ProductQuantity';
 
-const Product = ({ id, name, image, price, quantity, handleQuantityChange, calculateSubtotal }) => {
+const Product = ({ id, name, image, price, quantity, handleQuantityChange, calculateSubtotal, handleProductDelete }) => {
 
   const imageSrc = require(`../../../../assets/images/${image}`).default;
 
   return (
     <li className={styles.product}>
-      <DeleteProduct />
+      <DeleteProduct
+        id={id}
+        handleProductDelete={handleProductDelete}
+      />
       <div className={styles.product__imgWrapper}>
         <img
           className={styles.product__img}
