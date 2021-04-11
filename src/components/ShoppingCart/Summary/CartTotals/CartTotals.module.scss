@@ -51,4 +51,9 @@
     font-size: $font-size-s;
     font-weight: 700;
   }
+
+  &__button[disabled] {
+    color: $color-buttonDisabled-text;
+    background-color: $color-buttonDisabled-background;
+  }
 }

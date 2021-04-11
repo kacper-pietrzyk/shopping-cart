@@ -17,6 +17,11 @@
     font-size: $font-size-s;
   }
 
+  &__button[disabled] {
+    color: $color-buttonDisabled-text;
+    background-color: $color-buttonDisabled-background;
+  }
+
   &__darkBackground {
     position: fixed;
     top: 0;

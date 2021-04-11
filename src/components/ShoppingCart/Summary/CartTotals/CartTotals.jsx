@@ -17,6 +17,7 @@ const CartTotals = ({ subtotal, grandTotal, handleSubmit }) => {
       <button
         className={styles.cartTotals__button}
         onClick={handleSubmit}
+        disabled={Number(subtotal) === 0 ? true : false}
       >
         Proceed to checkout
         </button>

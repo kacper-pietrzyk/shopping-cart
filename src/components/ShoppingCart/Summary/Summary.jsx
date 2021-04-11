@@ -8,7 +8,7 @@ const Summary = ({ subtotal }) => {
 
   const [submit, setSubmit] = useState(false);
 
-  const shippingValue = subtotal > 100 ? 0 : 23.80;
+  const shippingValue = (subtotal === 0 || subtotal > 100) ? 0 : 23.80;
   const grandTotal = subtotal + shippingValue;
 
   const handleSubmit = () => {
@@ -29,6 +29,7 @@ const Summary = ({ subtotal }) => {
       <button
         className={styles.summary__button}
         onClick={handleSubmit}
+        disabled={subtotal === 0 ? true : false}
       >
         Proceed to checkout
         </button>
