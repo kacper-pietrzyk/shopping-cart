@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CartTotals.module.scss';
 
-const CartTotals = ({ subtotal, grandTotal }) => {
+const CartTotals = ({ subtotal, grandTotal, handleSubmit }) => {
 
   return (
     <div className={styles.cartTotals}>
@@ -14,7 +14,12 @@ const CartTotals = ({ subtotal, grandTotal }) => {
         <h3 className={styles.cartTotals__grandTotalText}>Grand Total</h3>
         <p>${grandTotal}</p>
       </div>
-      <button className={styles.cartTotals__button}>Proceed to checkout</button>
+      <button
+        className={styles.cartTotals__button}
+        onClick={handleSubmit}
+      >
+        Proceed to checkout
+        </button>
     </div>
   );
 }
