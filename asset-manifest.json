@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.e124e20a.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.20c9de05.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.20c9de05.chunk.js.map",
+    "runtime-main.js": "/shopping-cart/static/js/runtime-main.50e84223.js",
+    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.50e84223.js.map",
+    "static/js/2.7d42a0af.chunk.js": "/shopping-cart/static/js/2.7d42a0af.chunk.js",
+    "static/js/2.7d42a0af.chunk.js.map": "/shopping-cart/static/js/2.7d42a0af.chunk.js.map",
+    "static/js/3.02ce71b4.chunk.js": "/shopping-cart/static/js/3.02ce71b4.chunk.js",
+    "static/js/3.02ce71b4.chunk.js.map": "/shopping-cart/static/js/3.02ce71b4.chunk.js.map",
+    "index.html": "/shopping-cart/index.html",
+    "static/css/main.e124e20a.chunk.css.map": "/shopping-cart/static/css/main.e124e20a.chunk.css.map",
+    "static/js/2.7d42a0af.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.7d42a0af.chunk.js.LICENSE.txt",
+    "static/media/Thumbs.db": "/shopping-cart/static/media/Thumbs.d39f44cf.db",
+    "static/media/headphones.png": "/shopping-cart/static/media/headphones.054e2115.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.50e84223.js",
+    "static/js/2.7d42a0af.chunk.js",
+    "static/css/main.e124e20a.chunk.css",
+    "static/js/main.20c9de05.chunk.js"
+  ]
+}
