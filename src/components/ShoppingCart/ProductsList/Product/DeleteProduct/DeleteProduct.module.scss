@@ -6,6 +6,28 @@
   outline: none;
 
   &__image {
-    width: $delete-width;
+    width: $delete-width-s;
+  }
+}
+
+@media (min-width: 600px) {
+  .delete {
+    margin-right: $delete-margin-m;
+
+    &__image {
+      width: $delete-width-m;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .delete:hover {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1280px) {
+  .delete {
+    margin-right: $delete-margin-l;
   }
 }

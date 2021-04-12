@@ -29,11 +29,22 @@
       border: 1px solid $color-inputBorder-active;
       outline: none;
     }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type=number] {
+      -moz-appearance: textfield;
+    }
   }
 
   &__edit {
     display: flex;
     width: 18px;
+    margin-left: 5px;
     background-color: $color-background-primary;
     border: none;
     outline: none;
@@ -41,5 +52,49 @@
 
   &__editImg {
     width: 100%;
+  }
+}
+
+@media(min-width: 600px) {
+  .quantity {
+
+    &__button {
+      width: 25px;
+      height: 25px;
+      font-size: $font-size-m;
+    }
+
+    &__input {
+      width: 30px;
+      height: 25px;
+      font-size: $font-size-m;
+    }
+
+    &__edit {
+      width: 23px;
+      margin-left: 10px;
+
+    }
+  }
+}
+
+@media(min-width: 1024px) {
+  .quantity {
+
+    &__button {
+      font-size: $font-size-l;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__input {
+      font-size: $font-size-l;
+    }
+
+    &__edit:hover {
+      cursor: pointer;
+    }
   }
 }

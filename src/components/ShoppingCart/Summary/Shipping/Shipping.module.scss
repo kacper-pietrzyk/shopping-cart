@@ -15,3 +15,26 @@
     font-size: $font-size-s;
   }
 }
+
+@media(min-width: 600px) {
+
+  .shipping {
+    font-size: $font-size-m;
+
+    &__text {
+      font-size: $font-size-m;
+    }
+  }
+}
+
+@media(min-width: 1024px) {
+
+  .shipping {
+    padding: 12px 20px;
+    font-size: $font-size-l;
+
+    &__text {
+      font-size: $font-size-l;
+    }
+  }
+}

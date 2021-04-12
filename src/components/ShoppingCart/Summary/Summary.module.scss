@@ -46,7 +46,7 @@
   &__info {
     padding: 20px;
     color: $color-text-secondary;
-    font-size: $font-size-l;
+    font-size: $font-size-xl;
     text-align: center;
     text-transform: uppercase;
   }
@@ -61,5 +61,64 @@
     font-family: $font-family-default;
     font-size: $font-size-s;
     outline: none;
+  }
+}
+
+@media(min-width: 600px) {
+  .summary {
+    padding: 0 100px;
+
+    &__button {
+      margin-bottom: 20px;
+      font-size: $font-size-m;
+    }
+
+    &__buttonBack {
+      font-size: $font-size-m;
+    }
+  }
+}
+
+@media(min-width: 1024px) {
+  .summary {
+    flex-grow: 1;
+    padding: 0;
+
+    &__button {
+      align-self: flex-end;
+      padding: 10px 15px;
+      font-size: $font-size-l;
+      border: 1px solid $color-buttonDark-background;
+
+      &:hover {
+        background-color: $color-buttonDark-text;
+        color: $color-buttonDark-background;
+        cursor: pointer;
+      }
+    }
+
+    &__button[disabled]:hover {
+      color: $color-buttonDisabled-text;
+      background-color: $color-buttonDisabled-background;
+      cursor: no-drop;
+    }
+
+    &__info {
+      padding: 30px;
+      font-size: $font-size-xxl;
+    }
+
+    &__buttonBack {
+      margin-bottom: 25px;
+      padding: 10px 20px;
+      font-size: $font-size-l;
+      border: 1px solid $color-buttonDark-background;
+
+      &:hover {
+        background-color: $color-buttonDark-text;
+        color: $color-buttonDark-background;
+        cursor: pointer;
+      }
+    }
   }
 }

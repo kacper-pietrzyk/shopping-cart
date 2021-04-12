@@ -28,7 +28,7 @@ body {
 
 .header {
   color: $color-text-primary;
-  font-size: $font-size-l;
+  font-size: $font-size-xl;
   font-weight: 400;
 }
 
@@ -52,4 +52,79 @@ body {
   font-family: $font-family-default;
   font-size: $font-size-s;
   font-weight: 700;
+}
+
+@media (min-width: 600px) {
+  .wrapper {
+    margin: 25px;
+  }
+
+  .updateCart {
+    font-size: $font-size-m;
+  }
+}
+
+@media (min-width: 800px) {
+  .wrapper {
+    margin: 25px 40px;
+  }
+
+  .header {
+    font-size: $font-size-xxl;
+  }
+
+  .productsWrapper {
+    padding: 0 10px 30px 30px;
+  }
+
+  .updateCart {
+    margin-right: 25px;
+  }
+}
+
+@media(min-width: 1024px) {
+
+  .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 60px 60px;
+  }
+
+  .innerWrapper {
+    flex-grow: 2;
+  }
+
+  .productsWrapper {
+    margin: 30px 25px 25px 0;
+    padding: 0 10px 30px 30px;
+  }
+
+  .updateCart {
+    margin-top: 30px;
+    padding: 10px 15px;
+    font-size: $font-size-l;
+
+    &:hover {
+      background-color: $color-buttonDark-text;
+      color: $color-buttonDark-background;
+      border: 1px solid $color-buttonDark-background;
+      cursor: pointer;
+    }
+  }
+}
+
+@media(min-width: 1280px) {
+
+  .innerWrapper {
+    flex-grow: 3;
+  }
+
+  .productsWrapper {
+    margin-right: 40px;
+  }
+
+  .updateCart {
+    margin-top: 20px;
+    padding: 7px 12px;
+  }
 }

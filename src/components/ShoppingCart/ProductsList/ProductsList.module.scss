@@ -15,7 +15,7 @@
   }
 
   &__name {
-    margin-left: calc(#{$product-width} + #{$delete-width});
+    margin-left: calc(#{$product-width-s} + #{$delete-width-s});
   }
 
   &__name,
@@ -28,5 +28,45 @@
 
   &__qty {
     text-align: left;
+  }
+
+  &__empty {
+    margin-top: 20px;
+  }
+}
+
+@media(min-width: 600px) {
+
+  .productsList {
+    font-size: $font-size-m;
+
+    &__name {
+      margin-left: calc(#{$product-width-m} + #{$delete-width-m} + #{$delete-margin-m});
+    }
+  }
+}
+
+@media(min-width: 800px) {
+
+  .productsList__name {
+    margin-left: calc(#{$product-width-l} + #{$delete-width-m} + #{$delete-margin-m});
+  }
+}
+
+@media(min-width: 1024px) {
+
+  .productsList {
+    font-size: $font-size-l;
+
+    &__name {
+      margin-left: calc(#{$product-width-l} + #{$product-margin} + #{$delete-width-m} + #{$delete-margin-m});
+    }
+  }
+}
+
+@media(min-width: 1280px) {
+
+  .productsList__name {
+    margin-left: calc(#{$product-width-xl} + #{$product-margin} + #{$delete-width-m} + #{$delete-margin-l});
   }
 }

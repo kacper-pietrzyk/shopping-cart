@@ -4,14 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 12px;
-  font-size: $font-size-s;
 }
 
 .cartTotals {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
+  background-color: $color-background-secondary;
   border: 1px solid $color-summaryBorder;
   font-weight: 700;
 
@@ -25,13 +24,17 @@
 
   &__subtotal {
     @include totalValues();
+    font-size: $font-size-s;
+    margin: 0 12px;
     padding: 15px 10px 10px;
     border-bottom: 1px solid $color-summaryBorder;
   }
 
   &__grandTotal {
     @include totalValues();
+    margin: 0 12px;
     padding: 15px 10px 20px;
+    font-size: $font-size-s;
   }
 
   &__subtotalText,
@@ -55,5 +58,66 @@
   &__button[disabled] {
     color: $color-buttonDisabled-text;
     background-color: $color-buttonDisabled-background;
+  }
+}
+
+@media(min-width: 600px) {
+  .cartTotals {
+
+    &__header,
+    &__subtotal,
+    &__grandTotal,
+    &__subtotalText,
+    &__grandTotalText,
+    &__button {
+      font-size: $font-size-m;
+    }
+  }
+}
+
+@media(min-width: 1024px) {
+  .cartTotals {
+    margin-top: 20px;
+
+    &__header,
+    &__subtotal,
+    &__grandTotal,
+    &__subtotalText,
+    &__grandTotalText,
+    &__button {
+      font-size: $font-size-l;
+    }
+
+    &__header {
+      padding: 12px 20px;
+    }
+
+    &__subtotal {
+      margin: 0 20px;
+      padding: 20px 10px 10px;
+    }
+
+    &__grandTotal {
+      margin: 0 20px;
+      padding: 20px 10px 25px;
+    }
+
+    &__button {
+      margin: 0 20px 30px;
+      padding: 10px;
+      border: 1px solid $color-buttonDark-background;
+
+      &:hover {
+        background-color: $color-buttonDark-text;
+        color: $color-buttonDark-background;
+        cursor: pointer;
+      }
+    }
+
+    &__button[disabled]:hover {
+      color: $color-buttonDisabled-text;
+      background-color: $color-buttonDisabled-background;
+      cursor: no-drop;
+    }
   }
 }
