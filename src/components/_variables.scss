@@ -4,8 +4,10 @@ $font-family-default: 'Roboto',
 sans-serif;
 
 $font-size-s: 1.2rem;
-// $font-size-m: 1.6rem;
-$font-size-l: 2.0rem;
+$font-size-m: 1.4rem;
+$font-size-l: 1.6rem;
+$font-size-xl: 2.0rem;
+$font-size-xxl: 2.6rem;
 
 $color-text-primary: rgb(119, 119, 119);
 $color-text-secondary: rgb(0, 0, 0);
@@ -31,5 +33,15 @@ $color-approval-shadow: rgb(90, 90, 90);
 $color-separationHeader-line: rgb(220, 220, 220);
 $color-separation-line: rgb(242, 242, 242);
 
-$product-width: 35px;
-$delete-width: 15px;
+$product-width-s: 35px;
+$product-width-m: 70px;
+$product-width-l: 100px;
+$product-width-xl: 150px;
+
+$product-margin: 30px;
+
+$delete-width-s: 15px;
+$delete-width-m: 20px;
+
+$delete-margin-m: 25px;
+$delete-margin-l: 35px;
