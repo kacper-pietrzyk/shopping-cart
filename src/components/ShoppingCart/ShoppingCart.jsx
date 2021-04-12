@@ -69,22 +69,24 @@ const ShoppingCart = () => {
 
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.header}>Shopping Cart</h1>
-      <main className={styles.productsWrapper}>
-        <ProductsList
-          productsList={productsList}
-          productsQty={productsQty}
-          handleQuantityChange={handleQuantityChange}
-          calculateSubtotal={calculateSubtotal}
-          handleProductDelete={handleProductDelete}
-        />
-        <button
-          className={styles.updateCart}
-          onClick={calculateSubtotal}
-        >
-          Update Shopping Cart
+      <div className={styles.innerWrapper}>
+        <h1 className={styles.header}>Shopping Cart</h1>
+        <main className={styles.productsWrapper}>
+          <ProductsList
+            productsList={productsList}
+            productsQty={productsQty}
+            handleQuantityChange={handleQuantityChange}
+            calculateSubtotal={calculateSubtotal}
+            handleProductDelete={handleProductDelete}
+          />
+          <button
+            className={styles.updateCart}
+            onClick={calculateSubtotal}
+          >
+            Update Shopping Cart
           </button>
-      </main>
+        </main>
+      </div>
       <Summary
         subtotal={subtotal}
       />
