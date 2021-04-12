@@ -27,7 +27,7 @@ const ProductsList = ({ productsList, productsQty, handleQuantityChange, calcula
         <p className={styles.productsList__price}>Unit Price</p>
         <p className={styles.productsList__qty}>Qty</p>
       </li>
-      {products}
+      {products.length ? products : <h3 className={styles.productsList__empty}>Shopping cart is empty!</h3>}
     </ul>
   );
 }
